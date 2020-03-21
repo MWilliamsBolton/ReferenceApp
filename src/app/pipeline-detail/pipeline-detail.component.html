@@ -1,0 +1,9 @@
+
+<div *ngIf="pipeline else nothingSelected">
+    <h2>{{pipeline.name | uppercase}} detais</h2>
+    <div><span><label>ID: {{pipeline.id}}</label></span></div>
+    <div><label>Name</label><input [(ngModel)]=pipeline.name /></div>
+</div>
+    
+
+<ng-template #nothingSelected>Pleae select one</ng-template>

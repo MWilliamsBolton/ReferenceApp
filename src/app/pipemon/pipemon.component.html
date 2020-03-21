@@ -1,0 +1,13 @@
+<h2>Pipelines</h2>
+
+<ul class="pipelines">
+    <li *ngFor="let pipeline of pipelines"
+        [class.selected] = "pipeline === selectedPipeline"
+        (click)=onSelect(pipeline)>        
+        <span class="badge">{{pipeline.id}}: </span>{{pipeline.name}}
+    </li>
+ 
+</ul>
+
+
+<app-pipeline-detail [pipeline]="selectedPipeline"></app-pipeline-detail>
